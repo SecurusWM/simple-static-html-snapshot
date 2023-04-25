@@ -35,7 +35,7 @@ function simple_shs_generate_snapshot() {
     // Implement snapshot generation logic here
 
    // Check if the wget command is available
-if (!function_exists('exec') || !exec('which wget')) {
+   if (!function_exists('exec') || !exec('/usr/bin/wget')) {
     wp_send_json_error('The wget command is not available on your server. Please contact your hosting provider for assistance.');
     return;
 }
